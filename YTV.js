@@ -90,33 +90,7 @@ client.on('messageCreate', async message => {
                message.reply(mention.displayName+  "a le droit de parler");
            }
        }
-       if(message.content.startsWith(prefix +"play")){
-        if(message.member.voice.channel)
-        {
-            message.member.voice.channel.joinable.then(connection =>{
-              let arg = message.content.split(" ");
-            if(!arg[1]){
-                message.reply("Lien de la video manquant");
-                connection.disconnect();
-            }
-            else{
-            let dispatcher = connection.play(ytdl(arg[1],{quality:"highestaudio"}));
-            dispatcher.on("finish",()=> {
-                connection.disconnect();
-                dispatcher.destroy();
-            });
-            dispatcher.on("error",err=>{
-                console.log("erreur de dispatcher:"+err);
-            });
-        }
-            }).catch(err=>{
-                message.reply("Erreur lors de laconnexion :"+ err);
-            });
-
-        }
-        else{
-            message.reply("Vous n'etes pas connecté en vocal");
-        }
+        
     }
 });
 
