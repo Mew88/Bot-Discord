@@ -96,4 +96,4 @@ client.on('messageCreate', async message => {
 
 
 
-client.login("OTkwMzA3NTk5ODQ3MTQ1NDgy.GG4D45.Wuc_Htmb-gy5UHB0qCGbpnLauc6qKw60KRx7OM");
+client.login("your token bot");
