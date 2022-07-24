@@ -73,7 +73,7 @@ client.on('messageCreate', async message => {
            }
            else
            {
-               mention.roles.add("1000796134027042898");
+               mention.roles.add("ID du rôle avec les perm. suivante : pas le droit de poster un message ni de créer des fils");
                message.reply(mention.displayName+"n'a plus le droit de parler");
            }
        }
@@ -86,7 +86,7 @@ client.on('messageCreate', async message => {
            }
            else
            {
-               mention.roles.remove("1000796134027042898");
+               mention.roles.remove("ID du rôle avec les perm. suivante : pas le droit de poster un message ni de créer des fils");
                message.reply(mention.displayName+  "a le droit de parler");
            }
        }
